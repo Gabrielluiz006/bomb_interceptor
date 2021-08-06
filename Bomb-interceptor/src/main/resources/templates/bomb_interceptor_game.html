@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <header>
+        <title>mini míssil aleatório</title>
+        <meta charset="utf-8">
+        <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+        <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    </header>
+    <style>
+        #canvas{
+            border: solid 1px;
+            display: block;
+            width: 75%;
+            Height: 75%;
+            position: fixed; /*ou position: absolute;*/
+            top: 2.75rem;
+            left: 2.75rem;
+            }
+        #painel{
+            border: solid 1px;
+            width: 12rem;
+            Height: 28rem;
+            margin-left: 85%;
+        }
+    </style>
+    <body id = "body">
+        <p id="pontuacao">0</p>
+        <div id="painel"></div>
+        <canvas id="canvas" width="1260" height="590"></canvas>
+        <script th:src="@{/js/game-variables.js}"></script>
+        <script th:src="@{/js/key-board.js}"></script>
+        <script th:src="@{/js/web-socket-game.js}"></script>
+        <script th:src="@{/js/game.js}"></script>
+    </body>
+</html>
